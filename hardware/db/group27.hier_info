@@ -1,0 +1,194 @@
+|a
+decimal_point <= shift_reg:inst3.PO[4]
+output[0] <= shift_reg:inst3.PO[0]
+output[1] <= shift_reg:inst3.PO[1]
+output[2] <= shift_reg:inst3.PO[2]
+output[3] <= shift_reg:inst3.PO[3]
+output[4] <= shift_reg:inst3.PO[4]
+output[5] <= shift_reg:inst3.PO[5]
+output[6] <= shift_reg:inst3.PO[6]
+output[7] <= shift_reg:inst3.PO[7]
+clk => shift_reg:inst3.C
+clk => group27:inst.clk
+clk => S_counter:inst4.clk
+clk => display:inst2.clk
+clk => seven_seg:inst1.clk
+rx => shift_reg:inst3.SI
+rx => group27:inst.rx
+segment4[0] <= display:inst2.segment4[0]
+segment4[1] <= display:inst2.segment4[1]
+segment4[2] <= display:inst2.segment4[2]
+segment4[3] <= display:inst2.segment4[3]
+segment7[0] <= seven_seg:inst1.segment7[0]
+segment7[1] <= seven_seg:inst1.segment7[1]
+segment7[2] <= seven_seg:inst1.segment7[2]
+segment7[3] <= seven_seg:inst1.segment7[3]
+segment7[4] <= seven_seg:inst1.segment7[4]
+segment7[5] <= seven_seg:inst1.segment7[5]
+segment7[6] <= seven_seg:inst1.segment7[6]
+
+
+|a|shift_reg:inst3
+C => tmp[0].CLK
+C => tmp[1].CLK
+C => tmp[2].CLK
+C => tmp[3].CLK
+C => tmp[4].CLK
+C => tmp[5].CLK
+C => tmp[6].CLK
+C => tmp[7].CLK
+SI => tmp.DATAB
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+en_shift => tmp.OUTPUTSELECT
+PO[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+PO[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+PO[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+PO[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+PO[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+PO[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+PO[6] <= tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+PO[7] <= tmp[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|group27:inst
+clk => CS.IN1
+rx => Selector0.IN2
+rx => Output_logic.IN0
+CMP7_N => Output_logic.IN0
+CMP7_N => Output_logic.IN0
+CMP15_S => Selector0.IN3
+CMP15_S => Output_logic.IN1
+CMP15_S => Output_logic.IN1
+CMP15_S => EN_S.IN0
+CMP15_S => Selector4.IN2
+CMP7_S => Selector2.IN3
+CMP7_S => EN_S.IN0
+CMP7_S => Selector4.IN3
+CMP7_S => Selector5.IN3
+EN_N <= EN_N.DB_MAX_OUTPUT_PORT_TYPE
+EN_S <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+RESET_S <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+RESET_N <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+EN_SHIFT <= EN_SHIFT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|N_CMP7:inst10
+a[0] => Equal0.IN7
+a[1] => Equal0.IN6
+a[2] => Equal0.IN5
+a[3] => Equal0.IN4
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|S_counter:inst4
+clk => tmpN[0].CLK
+clk => tmpN[1].CLK
+clk => tmpN[2].CLK
+clk => tmpN[3].CLK
+clk => tmpS[0].CLK
+clk => tmpS[1].CLK
+clk => tmpS[2].CLK
+clk => tmpS[3].CLK
+rst_s => tmpS.OUTPUTSELECT
+rst_s => tmpS.OUTPUTSELECT
+rst_s => tmpS.OUTPUTSELECT
+rst_s => tmpS.OUTPUTSELECT
+rst_n => tmpN.OUTPUTSELECT
+rst_n => tmpN.OUTPUTSELECT
+rst_n => tmpN.OUTPUTSELECT
+rst_n => tmpN.OUTPUTSELECT
+EN_S => tmpS.OUTPUTSELECT
+EN_S => tmpS.OUTPUTSELECT
+EN_S => tmpS.OUTPUTSELECT
+EN_S => tmpS.OUTPUTSELECT
+EN_N => tmpN.OUTPUTSELECT
+EN_N => tmpN.OUTPUTSELECT
+EN_N => tmpN.OUTPUTSELECT
+EN_N => tmpN.OUTPUTSELECT
+s[0] <= tmpS[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= tmpS[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= tmpS[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= tmpS[3].DB_MAX_OUTPUT_PORT_TYPE
+n[0] <= tmpN[0].DB_MAX_OUTPUT_PORT_TYPE
+n[1] <= tmpN[1].DB_MAX_OUTPUT_PORT_TYPE
+n[2] <= tmpN[2].DB_MAX_OUTPUT_PORT_TYPE
+n[3] <= tmpN[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|S_CMP15:inst5
+a[0] => Equal0.IN7
+a[1] => Equal0.IN6
+a[2] => Equal0.IN5
+a[3] => Equal0.IN4
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|S_CMP7:inst6
+a[0] => Equal0.IN7
+a[1] => Equal0.IN6
+a[2] => Equal0.IN5
+a[3] => Equal0.IN4
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|display:inst2
+clk => ~NO_FANOUT~
+seg[5] => Mux0.IN5
+seg[5] => Mux1.IN5
+seg[5] => Mux2.IN5
+seg[5] => Mux3.IN5
+seg[6] => Mux0.IN4
+seg[6] => Mux1.IN4
+seg[6] => Mux2.IN4
+seg[6] => Mux3.IN4
+segment4[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment4[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment4[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment4[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|a|seven_seg:inst1
+clk => ~NO_FANOUT~
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+segment7[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment7[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment7[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment7[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment7[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment7[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment7[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

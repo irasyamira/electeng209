@@ -1,0 +1,435 @@
+Fitter report for group27
+Tue Oct 18 15:23:56 2016
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Other Routing Usage Summary
+ 18. LAB Macrocells
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Fitter Summary                                                          ;
++---------------------------+---------------------------------------------+
+; Fitter Status             ; Successful - Tue Oct 18 15:23:56 2016       ;
+; Quartus II 64-Bit Version ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name             ; group27                                     ;
+; Top-level Entity Name     ; a                                           ;
+; Family                    ; MAX7000AE                                   ;
+; Device                    ; EPM7064AELC44-10                            ;
+; Timing Models             ; Final                                       ;
+; Total macrocells          ; 30 / 64 ( 47 % )                            ;
+; Total pins                ; 26 / 36 ( 72 % )                            ;
++---------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                               ;
++----------------------------------------------------------------------------+------------------+---------------+
+; Option                                                                     ; Setting          ; Default Value ;
++----------------------------------------------------------------------------+------------------+---------------+
+; Device                                                                     ; EPM7064AELC44-10 ;               ;
+; Fitter Effort                                                              ; Standard Fit     ; Auto Fit      ;
+; Use smart compilation                                                      ; Off              ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On               ; On            ;
+; Enable compact report table                                                ; Off              ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off              ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off              ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off              ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal           ; Normal        ;
+; Limit to One Fitting Attempt                                               ; Off              ; Off           ;
+; Fitter Initial Placement Seed                                              ; 1                ; 1             ;
+; Slow Slew Rate                                                             ; Off              ; Off           ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off              ; Off           ;
++----------------------------------------------------------------------------+------------------+---------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in D:/Group27/group27 (VHDL_CPLD)/output_files/group27.pin.
+
+
++-------------------------------------------------+
+; Fitter Resource Usage Summary                   ;
++------------------------------+------------------+
+; Resource                     ; Usage            ;
++------------------------------+------------------+
+; Logic cells                  ; 30 / 64 ( 47 % ) ;
+; Registers                    ; 18 / 64 ( 28 % ) ;
+; Number of pterms used        ; 66               ;
+; I/O pins                     ; 26 / 36 ( 72 % ) ;
+;     -- Clock pins            ; 1 / 2 ( 50 % )   ;
+;     -- Dedicated input pins  ; 0 / 2 ( 0 % )    ;
+;                              ;                  ;
+; Global signals               ; 1                ;
+; Shareable expanders          ; 0 / 64 ( 0 % )   ;
+; Parallel expanders           ; 0 / 60 ( 0 % )   ;
+; Cells using turbo bit        ; 30 / 64 ( 47 % ) ;
+; Maximum fan-out              ; 18               ;
+; Highest non-global fan-out   ; 18               ;
+; Total fan-out                ; 204              ;
+; Average fan-out              ; 3.64             ;
++------------------------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                 ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+---------------+--------------+----------------------+
+; Name ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; I/O Standard ; Location assigned by ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+---------------+--------------+----------------------+
+; clk  ; 43    ; --       ; --  ; 18                    ; 0                  ; yes    ; no             ; no            ; 3.3-V LVTTL  ; User                 ;
+; rx   ; 24    ; --       ; 3   ; 6                     ; 0                  ; no     ; no             ; no            ; 3.3-V LVTTL  ; User                 ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+---------------+--------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                       ;
++---------------+-------+----------+-----+-----------------+---------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name          ; Pin # ; I/O Bank ; LAB ; Output Register ; Power Up High ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++---------------+-------+----------+-----+-----------------+---------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; decimal_point ; 14    ; --       ; 2   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; output[0]     ; 27    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[1]     ; 31    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[2]     ; 28    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[3]     ; 33    ; --       ; 4   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[4]     ; 26    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[5]     ; 25    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[6]     ; 41    ; --       ; 4   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output[7]     ; 29    ; --       ; 3   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; Fitter               ; 10 pF ; -                    ; -                   ;
+; segment4[0]   ; 16    ; --       ; 2   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment4[1]   ; 17    ; --       ; 2   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment4[2]   ; 18    ; --       ; 2   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment4[3]   ; 19    ; --       ; 2   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[0]   ; 12    ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[1]   ; 11    ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[2]   ; 9     ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[3]   ; 8     ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[4]   ; 6     ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[5]   ; 5     ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; segment7[6]   ; 4     ; --       ; 1   ; no              ; no            ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
++---------------+-------+----------+-----+-----------------+---------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 4        ; 3          ; --       ; segment7[6]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 5        ; 4          ; --       ; segment7[5]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 6        ; 5          ; --       ; segment7[4]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 7        ; 6          ; --       ; TDI            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 8        ; 7          ; --       ; segment7[3]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 9        ; 8          ; --       ; segment7[2]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; segment7[1]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 12       ; 11         ; --       ; segment7[0]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 13       ; 12         ; --       ; TMS            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 14       ; 13         ; --       ; decimal_point  ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 15       ; 14         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 16       ; 15         ; --       ; segment4[0]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 17       ; 16         ; --       ; segment4[1]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 18       ; 17         ; --       ; segment4[2]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 19       ; 18         ; --       ; segment4[3]    ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 20       ; 19         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 24       ; 23         ; --       ; rx             ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 25       ; 24         ; --       ; output[5]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 26       ; 25         ; --       ; output[4]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 27       ; 26         ; --       ; output[0]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 28       ; 27         ; --       ; output[2]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 29       ; 28         ; --       ; output[7]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; output[1]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 33       ; 32         ; --       ; output[3]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 34       ; 33         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 36       ; 35         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 37       ; 36         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 38       ; 37         ; --       ; TDO            ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 39       ; 38         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; GND*           ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; output[6]      ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; clk            ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; 3.3-V LVTTL  ; -          ; 1                    ; 0                 ; 0                 ; 1     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Dedicated Inputs I/O                                               ;
++------+-------+-------+-------+--------------+------------+---------+
+; Name ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++------+-------+-------+-------+--------------+------------+---------+
+; clk  ; 43    ; Input ; --    ; 3.3-V LVTTL  ; -          ; 0 mA    ;
++------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; 3.3-V PCI    ; 10 pF ; 25 Ohm (Parallel)      ;
+; 2.5 V        ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                         ;
++--------------------------------+------------+------+-------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; Macrocells ; Pins ; Full Hierarchy Name                       ; Library Name ;
++--------------------------------+------------+------+-------------------------------------------+--------------+
+; |a                             ; 30         ; 26   ; |a                                        ; work         ;
+;    |S_counter:inst4|           ; 8          ; 0    ; |a|S_counter:inst4                        ; work         ;
+;       |lpm_counter:tmpN_rtl_0| ; 4          ; 0    ; |a|S_counter:inst4|lpm_counter:tmpN_rtl_0 ; work         ;
+;       |lpm_counter:tmpS_rtl_0| ; 4          ; 0    ; |a|S_counter:inst4|lpm_counter:tmpS_rtl_0 ; work         ;
+;    |display:inst2|             ; 4          ; 0    ; |a|display:inst2                          ; work         ;
+;    |group27:inst|              ; 2          ; 0    ; |a|group27:inst                           ; work         ;
+;    |seven_seg:inst1|           ; 7          ; 0    ; |a|seven_seg:inst1                        ; work         ;
+;    |shift_reg:inst3|           ; 9          ; 0    ; |a|shift_reg:inst3                        ; work         ;
++--------------------------------+------------+------+-------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                       ;
++------------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
+; Name                                           ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++------------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0] ; LC39     ; 18      ; Clock enable ; no     ; --                   ; --               ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1] ; LC34     ; 17      ; Clock enable ; no     ; --                   ; --               ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2] ; LC48     ; 16      ; Clock enable ; no     ; --                   ; --               ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3] ; LC42     ; 15      ; Clock enable ; no     ; --                   ; --               ;
+; clk                                            ; PIN_43   ; 18      ; Clock        ; yes    ; On                   ; --               ;
+; group27:inst|CS.state_bit_0                    ; LC33     ; 18      ; Clock enable ; no     ; --                   ; --               ;
+; group27:inst|CS.state_bit_1                    ; LC38     ; 18      ; Clock enable ; no     ; --                   ; --               ;
++------------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; clk  ; PIN_43   ; 18      ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++----------------------------------------------------------+
+; Non-Global High Fan-Out Signals                          ;
++------------------------------------------------+---------+
+; Name                                           ; Fan-Out ;
++------------------------------------------------+---------+
+; group27:inst|CS.state_bit_0                    ; 18      ;
+; group27:inst|CS.state_bit_1                    ; 18      ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0] ; 18      ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1] ; 17      ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2] ; 16      ;
+; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3] ; 15      ;
+; shift_reg:inst3|tmp[1]                         ; 9       ;
+; shift_reg:inst3|tmp[2]                         ; 9       ;
+; shift_reg:inst3|tmp[3]                         ; 9       ;
+; shift_reg:inst3|tmp[0]                         ; 8       ;
+; rx                                             ; 6       ;
+; shift_reg:inst3|tmp[5]                         ; 6       ;
+; shift_reg:inst3|tmp[6]                         ; 6       ;
+; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0] ; 5       ;
+; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1] ; 4       ;
+; shift_reg:inst3|tmp[4]                         ; 3       ;
+; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2] ; 3       ;
+; shift_reg:inst3|tmp[7]                         ; 2       ;
+; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3] ; 2       ;
+; seven_seg:inst1|Mux3~7                         ; 1       ;
+; seven_seg:inst1|Mux0~9                         ; 1       ;
+; seven_seg:inst1|Mux6~7                         ; 1       ;
+; seven_seg:inst1|Mux4~7                         ; 1       ;
+; seven_seg:inst1|Mux1~4                         ; 1       ;
+; seven_seg:inst1|Mux5~4                         ; 1       ;
+; seven_seg:inst1|Mux2~5                         ; 1       ;
+; shift_reg:inst3|tmp[4]~13                      ; 1       ;
+; display:inst2|Mux0~10                          ; 1       ;
+; display:inst2|Mux0~9                           ; 1       ;
+; display:inst2|Mux0~6                           ; 1       ;
+; display:inst2|Mux0~5                           ; 1       ;
++------------------------------------------------+---------+
+
+
++-------------------------------------------------+
+; Other Routing Usage Summary                     ;
++-----------------------------+-------------------+
+; Other Routing Resource Type ; Usage             ;
++-----------------------------+-------------------+
+; Output enables              ; 0 / 6 ( 0 % )     ;
+; PIA buffers                 ; 31 / 144 ( 22 % ) ;
++-----------------------------+-------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 7.50) ; Number of LABs  (Total = 4) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 0                           ;
+; 1                                      ; 0                           ;
+; 2                                      ; 1                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 1                           ;
+; 6                                      ; 0                           ;
+; 7                                      ; 1                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 0                           ;
+; 14                                     ; 0                           ;
+; 15                                     ; 0                           ;
+; 16                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                                                                             ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC11       ; shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[3]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC3        ; shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC14       ; shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[3]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC4        ; shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[2]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC1        ; shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[3]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC16       ; shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[3]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC5        ; shift_reg:inst3|tmp[0], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[3]                                                                                                                                                                                                                                                                                                                                                                    ; segment7[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC20       ; shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[6]                                                                                                                                                                                                                                                                                                                                                                                                                    ; segment4[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC21       ; shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[6]                                                                                                                                                                                                                                                                                                                                                                                                                    ; segment4[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC24       ; shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[6]                                                                                                                                                                                                                                                                                                                                                                                                                    ; segment4[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC25       ; shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[6]                                                                                                                                                                                                                                                                                                                                                                                                                    ; segment4[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC30       ; shift_reg:inst3|tmp[4]                                                                                                                                                                                                                                                                                                                                                                                                                                            ; decimal_point                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC39       ; clk, rx, group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                 ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0] ;
+;  C  ; LC34       ; clk, rx, group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                 ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0]                                                 ;
+;  C  ; LC48       ; clk, rx, group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                                                                                                 ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0]                                                                                                 ;
+;  C  ; LC42       ; clk, rx, group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                                                 ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0]                                                                                                                                                 ;
+;  C  ; LC38       ; clk, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_0, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], group27:inst|CS.state_bit_1                                                                                                                                                                                                     ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0] ;
+;  C  ; LC47       ; clk, group27:inst|CS.state_bit_1, group27:inst|CS.state_bit_0, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0]                                                                                                                                                     ; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC45       ; clk, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], group27:inst|CS.state_bit_1, group27:inst|CS.state_bit_0, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1]                                                                                                     ; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC44       ; clk, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], group27:inst|CS.state_bit_1, group27:inst|CS.state_bit_0, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2]                                                     ; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC43       ; clk, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], group27:inst|CS.state_bit_1, group27:inst|CS.state_bit_0, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3]     ; S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC33       ; clk, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], rx, group27:inst|CS.state_bit_0 ; S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[0], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpN_rtl_0|dffs[3], group27:inst|CS.state_bit_0, shift_reg:inst3|tmp[7], shift_reg:inst3|tmp[6], shift_reg:inst3|tmp[5], shift_reg:inst3|tmp[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[2], shift_reg:inst3|tmp[1], shift_reg:inst3|tmp[0] ;
+;  C  ; LC41       ; clk, rx, group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                                                 ; output[7], shift_reg:inst3|tmp[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC35       ; clk, shift_reg:inst3|tmp[6], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[5], shift_reg:inst3|tmp[4], display:inst2|Mux0~5, display:inst2|Mux0~6, display:inst2|Mux0~9, display:inst2|Mux0~10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  C  ; LC36       ; clk, shift_reg:inst3|tmp[5], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[4], shift_reg:inst3|tmp[3], shift_reg:inst3|tmp[4]~13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC40       ; clk, shift_reg:inst3|tmp[3], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[2], shift_reg:inst3|tmp[1], seven_seg:inst1|Mux2~5, seven_seg:inst1|Mux5~4, seven_seg:inst1|Mux1~4, seven_seg:inst1|Mux4~7, seven_seg:inst1|Mux6~7, seven_seg:inst1|Mux0~9, seven_seg:inst1|Mux3~7                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  C  ; LC46       ; clk, shift_reg:inst3|tmp[2], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[1], shift_reg:inst3|tmp[0], seven_seg:inst1|Mux2~5, seven_seg:inst1|Mux5~4, seven_seg:inst1|Mux1~4, seven_seg:inst1|Mux4~7, seven_seg:inst1|Mux6~7, seven_seg:inst1|Mux0~9, seven_seg:inst1|Mux3~7                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  C  ; LC37       ; clk, shift_reg:inst3|tmp[1], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[0], seven_seg:inst1|Mux2~5, seven_seg:inst1|Mux5~4, seven_seg:inst1|Mux1~4, seven_seg:inst1|Mux4~7, seven_seg:inst1|Mux6~7, seven_seg:inst1|Mux0~9, seven_seg:inst1|Mux3~7                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  D  ; LC64       ; clk, shift_reg:inst3|tmp[7], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[6], shift_reg:inst3|tmp[5], display:inst2|Mux0~5, display:inst2|Mux0~6, display:inst2|Mux0~9, display:inst2|Mux0~10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC49       ; clk, shift_reg:inst3|tmp[4], group27:inst|CS.state_bit_0, group27:inst|CS.state_bit_1, S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[3], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[2], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[1], S_counter:inst4|lpm_counter:tmpS_rtl_0|dffs[0]                                                                                                                                                                             ; output[3], shift_reg:inst3|tmp[2], seven_seg:inst1|Mux2~5, seven_seg:inst1|Mux5~4, seven_seg:inst1|Mux1~4, seven_seg:inst1|Mux4~7, seven_seg:inst1|Mux6~7, seven_seg:inst1|Mux0~9, seven_seg:inst1|Mux3~7                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Security bit                                 ; Off                      ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (119006): Selected device EPM7064AELC44-10 for design "group27"
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 556 megabytes
+    Info: Processing ended: Tue Oct 18 15:23:56 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
